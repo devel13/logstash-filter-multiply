@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.licenses      = ['Apache-2.0']
   s.summary       = 'Write a short summary, because Rubygems requires one.'
   s.description   = 'Write a longer description or delete this line.'
-  s.homepage      = 'https://github.com/devel13/first_gem'
+  s.homepage      = 'https://github.com/devel13/logstash-filter-multiply'
   s.authors       = ['']
   s.email         = ''
   s.require_paths = ['lib']
