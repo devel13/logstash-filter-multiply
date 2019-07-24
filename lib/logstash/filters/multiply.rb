@@ -20,7 +20,7 @@ class LogStash::Filters::Multiply < LogStash::Filters::Base
 
   # Replace the message with this value.
   config :message, :validate => :string, :default => "Hello World!"
-
+  config :inputNumber, :validate => :string, :default => '1'
 
   public
   def register
@@ -30,7 +30,8 @@ class LogStash::Filters::Multiply < LogStash::Filters::Base
   public
   def filter(event)
 
-    eventAmmount = event.get("amount").to_i
+    #eventAmmount = event.get("amount").to_i
+    eventAmmount = event.get("message").to_i
     multiply = eventAmmount * @inputNumber.to_i
     event.set("multipliedValue", multiply)
 
